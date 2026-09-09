@@ -24,6 +24,10 @@ body[data-theme="dark"] {
   color: var(--text);
 }
 
+body[data-theme="dark"]  {
+  color: #ffffff !important;
+}
+
 body[data-theme="dark"] .text-primary-emphasis {
   color: #ffffff !important;
 }
@@ -47,6 +51,44 @@ body[data-theme="dark"] .dropdown-item {
 body[data-theme="dark"] .dropdown-item:hover {
   background-color: #21262d;
 }
+
+/* =========================
+   THEME TRANSITION
+   ========================= */
+
+body,
+.navbar,
+.dropdown-menu,
+.dropdown-item,
+section,
+.card,
+.btn,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+#heroImage {
+  transition:
+    opacity 0.3s ease,
+    transform 0.5s ease;
+}
+
+#heroImage.theme-changing {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+
 
 .hero .col img {
   width: 400px;

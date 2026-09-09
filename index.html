@@ -128,9 +128,10 @@
           </div>
           <div class="col d-flex justify-content-center justify-content-lg-end">
             <img
+            id="heroImage"
               src="assets/image/undraw_all-the-data_ijgn.svg"
               alt="welcome"
-              class="img-fluid rounded"
+              class="img-fluid rounded bright"
             />
           </div>
         </div>
@@ -170,27 +171,53 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const themeOptions = document.querySelectorAll(".theme-option");
+        const heroImage = document.getElementById("heroImage");
 
-        // Ambil tema yang tersimpan
         const savedTheme = localStorage.getItem("portfolio_theme") || "bright";
 
-        // Terapkan tema saat halaman dibuka
-        document.body.setAttribute("data-theme", savedTheme);
+        setTheme(savedTheme, false);
 
-        // Ketika user memilih tema
         themeOptions.forEach((option) => {
           option.addEventListener("click", (event) => {
             event.preventDefault();
 
             const selectedTheme = option.dataset.theme;
 
-            // Ubah tema
-            document.body.setAttribute("data-theme", selectedTheme);
+            setTheme(selectedTheme, true);
 
-            // Simpan pilihan user
             localStorage.setItem("portfolio_theme", selectedTheme);
           });
         });
+
+        function setTheme(theme, animate = true) {
+          if (animate && heroImage) {
+            heroImage.classList.add("theme-changing");
+
+            setTimeout(() => {
+              document.body.setAttribute("data-theme", theme);
+
+              if (heroImage) {
+                heroImage.src =
+                  theme === "dark"
+                    ? "assets/image/undraw_action-required_pplo.png"
+                    : "assets/image/undraw_all-the-data_ijgn.svg";
+              }
+
+              requestAnimationFrame(() => {
+                heroImage.classList.remove("theme-changing");
+              });
+            }, 250);
+          } else {
+            document.body.setAttribute("data-theme", theme);
+
+            if (heroImage) {
+              heroImage.src =
+                theme === "dark"
+                  ? "assets/image/hero-dark.svg"
+                  : "assets/image/hero-bright.svg";
+            }
+          }
+        }
       });
     </script>
   </body>
