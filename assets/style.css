@@ -5,3 +5,25 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.hero .col img {
+  width: 400px;
+}
+#about .col img {
+  width: 500px;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 510px) {
+  .hero .col img {
+    width: 80%;
+  }
+
+  #about .col img {
+    width: 100%;
+  }
+}

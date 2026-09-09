@@ -19,7 +19,7 @@
     <title>Home | IDN E-Report</title>
   </head>
 
-  <body>
+  <body data-theme="bright">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-primary-subtle py-4">
       <div class="container">
@@ -30,7 +30,7 @@
             width="30"
             class="d-inline-block align-text-top rounded"
           />
-        <span class="fw-bold text-primary-emphasis">IDN E-Report</span>
+          <span class="fw-bold text-primary-emphasis">IDN E-Report</span>
         </a>
         <button
           class="navbar-toggler shadow-none"
@@ -46,7 +46,12 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto gap-3 pt-3 pt-lg-0">
             <li class="nav-item">
-              <a class="nav-link text-primary-emphasis active" aria-current="page" href="#">Home</a>
+              <a
+                class="nav-link text-primary-emphasis active"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link text-primary-emphasis" href="#">About</a>
@@ -79,11 +84,18 @@
               >
                 Theme
               </a>
+
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">default</a></li>
-                <li><a class="dropdown-item" href="#">dark</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item theme-option" data-theme="bright">
+                    Bright
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item theme-option" data-theme="dark">
+                    Dark
+                  </a>
                 </li>
               </ul>
             </li>
@@ -91,6 +103,57 @@
         </div>
       </div>
     </nav>
+
+    <!-- hero -->
+    <section clsass="hero">
+      <div class="container">
+        <div
+          class="hero row align-items-center gap-5 gap-lg-0 flex-column flex-nowrap flex-lg-row text-center text-lg-start"
+        >
+          <div class="col">
+            <h1 class="fw-bold text-primary-emphasis">
+              Welcome to <br />
+              <span class="text-primary">IDN E-Report 2026</span>
+            </h1>
+            <p class="lh-lg fs-6 text-secondary-emphasis">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              fugit neque, amet hic maiores ipsum veritatis explicabo provident,
+              reprehenderit vero ad repellat cupiditate placeat eligendi.
+              Debitis numquam illum nesciunt natus?
+            </p>
+            <div>
+              <a href="" class="btn btn-primary">Let's Start</a>
+              <a href="" class="btn btn-outline-primary">About Us</a>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center justify-content-lg-end">
+            <img
+              src="assets/image/undraw_all-the-data_ijgn.svg"
+              alt="welcome"
+              class="img-fluid rounded"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="fw-bold text-primary mb-4">About Us</h2>
+            <p class="lh-lg fs-5 text-secondary-emphasis mb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              fugit neque, amet hic maiores ipsum veritatis explicabo provident,
+              reprehenderit vero ad repellat cupiditate placeat eligendi.
+              Debitis numquam illum nesciunt natus?
+            </p>
+            <img src="assets/image/undraw_team-work_i1f3.png" alt="about" />
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- JavaScript Bundle with Popper -->
     <script
@@ -103,5 +166,32 @@
       integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeOptions = document.querySelectorAll(".theme-option");
+
+        // Ambil tema yang tersimpan
+        const savedTheme = localStorage.getItem("portfolio_theme") || "bright";
+
+        // Terapkan tema saat halaman dibuka
+        document.body.setAttribute("data-theme", savedTheme);
+
+        // Ketika user memilih tema
+        themeOptions.forEach((option) => {
+          option.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            const selectedTheme = option.dataset.theme;
+
+            // Ubah tema
+            document.body.setAttribute("data-theme", selectedTheme);
+
+            // Simpan pilihan user
+            localStorage.setItem("portfolio_theme", selectedTheme);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
