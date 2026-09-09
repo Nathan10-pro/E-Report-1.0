@@ -24,7 +24,7 @@ body[data-theme="dark"] {
   color: var(--text);
 }
 
-body[data-theme="dark"]  {
+body[data-theme="dark"] {
   color: #ffffff !important;
 }
 
@@ -78,17 +78,18 @@ a {
     box-shadow 0.5s ease;
 }
 #heroImage {
+  opacity: 1;
+  transform: scale(1);
+
   transition:
     opacity 0.3s ease,
-    transform 0.5s ease;
+    transform 0.4s ease;
 }
 
 #heroImage.theme-changing {
   opacity: 0;
   transform: scale(0.96);
 }
-
-
 
 .hero .col img {
   width: 400px;

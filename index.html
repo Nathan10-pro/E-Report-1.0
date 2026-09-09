@@ -128,10 +128,10 @@
           </div>
           <div class="col d-flex justify-content-center justify-content-lg-end">
             <img
-            id="heroImage"
-              src="assets/image/undraw_all-the-data_ijgn.svg"
+              id="heroImage"
+              src="assets/image/hero-bright.svg"
               alt="welcome"
-              class="img-fluid rounded bright"
+              class="img-fluid rounded"
             />
           </div>
         </div>
@@ -175,6 +175,7 @@
 
         const savedTheme = localStorage.getItem("portfolio_theme") || "bright";
 
+        // Terapkan theme + gambar saat pertama kali halaman dibuka
         setTheme(savedTheme, false);
 
         themeOptions.forEach((option) => {
@@ -190,33 +191,45 @@
         });
 
         function setTheme(theme, animate = true) {
-          if (animate && heroImage) {
-            heroImage.classList.add("theme-changing");
+          // Pastikan theme valid
+          if (theme !== "bright" && theme !== "dark") {
+            theme = "bright";
+          }
 
-            setTimeout(() => {
-              document.body.setAttribute("data-theme", theme);
+          const imageSrc =
+            theme === "dark"
+              ? "assets/image/hero-dark.png"
+              : "assets/image/hero-bright.svg";
 
-              if (heroImage) {
-                heroImage.src =
-                  theme === "dark"
-                    ? "assets/image/undraw_action-required_pplo.png"
-                    : "assets/image/undraw_all-the-data_ijgn.svg";
-              }
-
-              requestAnimationFrame(() => {
-                heroImage.classList.remove("theme-changing");
-              });
-            }, 250);
-          } else {
+          // FIRST LOAD
+          if (!animate) {
             document.body.setAttribute("data-theme", theme);
 
             if (heroImage) {
-              heroImage.src =
-                theme === "dark"
-                  ? "assets/image/hero-dark.svg"
-                  : "assets/image/hero-bright.svg";
+              heroImage.src = imageSrc;
             }
+
+            return;
           }
+
+          // THEME CHANGE ANIMATION
+          if (heroImage) {
+            heroImage.classList.add("theme-changing");
+          }
+
+          setTimeout(() => {
+            document.body.setAttribute("data-theme", theme);
+
+            if (heroImage) {
+              heroImage.src = imageSrc;
+            }
+
+            requestAnimationFrame(() => {
+              if (heroImage) {
+                heroImage.classList.remove("theme-changing");
+              }
+            });
+          }, 250);
         }
       });
     </script>
