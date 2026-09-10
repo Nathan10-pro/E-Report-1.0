@@ -9,13 +9,6 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
-      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="stylesheet" href="./assets/style.css" />
 
     <link
@@ -23,9 +16,8 @@
       type="image/x-icon"
       href="./assets/image/cropped-Frame-88.png"
     />
-    <title>Home | IDN E-Report</title>
+    <title>Recent | IDN E-Report</title>
   </head>
-
   <body data-theme="bright">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-primary-subtle py-4">
@@ -117,121 +109,78 @@
       </div>
     </nav>
 
-    <!-- hero -->
-    <section clsass="hero">
-      <div class="container">
-        <div
-          class="hero row align-items-center gap-5 gap-lg-0 flex-column flex-nowrap flex-lg-row text-center text-lg-start"
-        >
-          <div class="col">
-            <h1 class="fw-bold text-primary-emphasis">
-              Welcome to <br />
-              <span class="text-primary">IDN E-Report 2026</span>
-            </h1>
-            <p class="lh-lg fs-6 text-secondary-emphasis">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              fugit neque, amet hic maiores ipsum veritatis explicabo provident,
-              reprehenderit vero ad repellat cupiditate placeat eligendi.
-              Debitis numquam illum nesciunt natus?
-            </p>
-            <div>
-              <a href="" class="btn btn-primary">Let's Start</a>
-              <a href="" class="btn btn-outline-primary">About Us</a>
-            </div>
-          </div>
-          <div class="col d-flex justify-content-center justify-content-lg-end">
-            <img
-              id="heroImage"
-              src="assets/image/hero-bright.svg"
-              alt="welcome"
-              class="img-fluid rounded"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <h2 class="fw-bold text-primary mb-4">About Us</h2>
-            <p class="lh-lg fs-5 text-secondary-emphasis mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              fugit neque, amet hic maiores ipsum veritatis explicabo provident,
-              reprehenderit vero ad repellat cupiditate placeat eligendi.
-              Debitis numquam illum nesciunt natus?
-            </p>
-            <img src="assets/image/upscalemedia-transformed.png" alt="about" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="py-5">
-      <div class="container">
+    <!-- recent -->
+    <section id="recent" class="py-5">
+      <div class="container p-5">
         <div class="row text-center mb-5">
           <div class="col">
-            <h2 class="fw-bold text-primary mb-4">Our Services</h2>
-            <p class="lh-lg fs-5 text-secondary-emphasis">
-              Streamline the reporting process with a structured, fast, and
-              user-friendly system.
+            <h2 class="fw-bold text-primary-emphasis mb-4">
+              Recent Complaints
+            </h2>
+            <p class="text-secondary-emphasis lh-lg fs-6">
+              Here are some of the most recent complaints submitted by our
+              users.
             </p>
           </div>
         </div>
 
-        <div class="services row gap-3 p-2 p-lg-0">
-          <div class="col p-4 p-lg-0">
+        <div class="service row">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div
-              class="card shadow border-0 rounded-4 p-4 bg-primary-subtle"
+              class="card border-1 rounded-4"
+              style="width: 18rem"
             >
-              <i
-                class="fa-solid fa-book-open fa-3x text-primary-emphasis d-block text-center mb-3"
-              ></i>
-              <div class="card-body text-start">
-                <h5 class="card-title fw-bold">Academic Complaint</h5>
-                <p class="card-text text-secondary-emphasis lh-lg fs-6">
-                  Report academic concerns, issues, or complaints related to
-                  learning, teaching, and academic activities.
+            <div style="background-color: rgba(0, 0, 0, 0.4);" class="position-absolute px-2 py-1 rounded-3">
+              <a href="#" class="text-white" style="text-decoration: none;">Academic</a>
+            </div>
+              <img src="assets/image/ChatGPT Image 10 Sep 2026, 14.42.06.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="mb-4">By : <a href="#" class="text-primary-emphasis" style="text-decoration: none;">John Doe</a></p>
+                <h5 class="card-title">Difficulty Understanding the Learning Material</h5>
+                <p class="card-text">
+                  Students reported difficulties understanding certain topics during the learning process and requested additional explanations.
                 </p>
+                <a href="#" class="text-primary-emphasis" style="text-decoration: none;">Go somewhere</a>
               </div>
             </div>
           </div>
 
-          <div class="col p-4 p-lg-0">
+           <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div
-              class="card shadow border-0 rounded-4 p-4 bg-primary-subtle"
+              class="card border-1 rounded-4"
+              style="width: 18rem"
             >
-              <i
-                class="fa-solid fa-building fa-3x text-primary-emphasis d-block text-center mb-3"
-              ></i>
-              <div class="card-body text-start">
-                <h5 class="card-title fw-bold">Facility Complaints</h5>
-                <p class="card-text text-secondary-emphasis lh-lg fs-6">
-                  Report problems or concerns regarding school facilities and
-                  infrastructure to help maintain a comfortable learning
-                  environment.
+            <div style="background-color: rgba(0, 0, 0, 0.4);" class="position-absolute px-2 py-1 rounded-3">
+              <a href="#" class="text-white" style="text-decoration: none;">Academic</a>
+            </div>
+              <img src="assets/image/ChatGPT Image 10 Sep 2026, 14.42.06.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="mb-4">By : <a href="#" class="text-primary-emphasis" style="text-decoration: none;">John Doe</a></p>
+                <h5 class="card-title">Difficulty Understanding the Learning Material</h5>
+                <p class="card-text">
+                  Students reported difficulties understanding certain topics during the learning process and requested additional explanations.
                 </p>
+                <a href="#" class="text-primary-emphasis" style="text-decoration: none;">Go somewhere</a>
               </div>
             </div>
           </div>
 
-          <div class="col p-4 p-lg-0">
+           <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div
-             class="card shadow border-0 rounded-4 p-4 bg-primary-subtle"
+              class="card border-1 rounded-4"
+              style="width: 18rem"
             >
-              <i
-                class="fa-solid fa-user-secret fa-3x text-primary-emphasis d-block text-center mb-3"
-              ></i>
-              <div class="card-body text-start">
-                <h5 class="card-title fw-bold">Anonymous Reports</h5>
-                <p class="card-text text-secondary-emphasis lh-lg fs-6">
-                  Submit reports anonymously when you prefer to keep your
-                  identity private. Your privacy is respected throughout the
-                  reporting process.
+            <div style="background-color: rgba(0, 0, 0, 0.4);" class="position-absolute px-2 py-1 rounded-3">
+              <a href="#" class="text-white" style="text-decoration: none;">Academic</a>
+            </div>
+              <img src="assets/image/ChatGPT Image 10 Sep 2026, 14.42.06.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="mb-4">By : <a href="#" class="text-primary-emphasis" style="text-decoration: none;">John Doe</a></p>
+                <h5 class="card-title">Difficulty Understanding the Learning Material</h5>
+                <p class="card-text">
+                  Students reported difficulties understanding certain topics during the learning process and requested additional explanations.
                 </p>
+                <a href="#" class="text-primary-emphasis" style="text-decoration: none;">Go somewhere</a>
               </div>
             </div>
           </div>
