@@ -18,10 +18,10 @@ body[data-theme="bright"] {
   color: var(--textb);
 }
 body[data-theme="dark"] {
-  --bg: #140a35;
+  --bg: #0d0720;
   --text: #ffffff;
-  --surface: #0f006d;
-  --primary: #58a6ff;
+  --surface: #21262d;
+  --primary: #0077ff;
 
   background-color: var(--bg);
   color: var(--text);
@@ -81,7 +81,7 @@ body[data-theme="dark"] .accordion-button {
   color: var(--text) !important;
 }
 body[data-theme="dark"] #recent .card {
-  background-color: rgb(19, 12, 88) !important;
+  background-color: #21262d !important;
   color: var(--text) !important;
 }
 
@@ -135,6 +135,18 @@ a {
 section {
   padding-top: 100px;
   padding-bottom: 50px;
+}
+
+footer {
+  margin-top: 100px;
+  padding-bottom: 20px;
+}
+.footer-link {
+  text-decoration: none;
+  color: var(--textb);
+}
+.footer-link:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 510px) {
