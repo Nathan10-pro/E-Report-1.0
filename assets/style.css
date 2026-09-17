@@ -3,6 +3,16 @@ html {
   scroll-behavior: smooth;
 }
 
+.animate__animated .animate__slideInLeft {
+  --animate-delay: 5s;
+}
+.animate__animated .animate__slideInRight {
+  --animate-delay: 10s;
+}
+.animate__animated .animate__slideInDown {
+  --animate-delay: 1s;
+}
+
 body {
   font-family: "Roboto", Poppins;
   margin: 0;
@@ -147,6 +157,46 @@ footer {
 }
 .footer-link:hover {
   text-decoration: underline;
+}
+
+.form-row{ margin-bottom: 20px; }
+.form-row label{
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.form-row input, .form-row textarea{
+  width: 100%;
+  background: var(--surfaceb);
+  border: 1px solid skyblue;
+  border-radius: 3px;
+  padding: 13px 14px;
+  color: var(--bgb);
+  font-size: 0.95rem;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+.form-row input:focus, .form-row textarea:focus{
+  outline: none;
+  border-color: black;
+  box-shadow: 0 0 10px skyblue;
+}
+.form-row textarea{ resize: vertical; min-height: 120px; }
+
+.form-note{
+  margin-top: 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--text);
+}
+.btnbtn-primary {
+  font-family: sans-serif;
+  border-color: #ffffff;
+  border-radius: 4px;
+    color: var(--text);
+    background-color: var(--surface);
 }
 
 @media screen and (max-width: 510px) {

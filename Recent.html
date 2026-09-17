@@ -9,6 +9,11 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+        <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css" />
 
     <link
@@ -102,17 +107,17 @@
       <div class="container p-5">
         <div class="row text-center mb-5">
           <div class="col">
-            <h1 class="fw-bold text-primary-emphasis mb-4">
+            <h1 data-aos="fade-up" data-aos-duration="3000" data-aos-delay="100" class="fw-bold text-primary-emphasis mb-4">
               Recent Complaints
             </h1>
-            <p class="text-secondary-emphasis lh-lg fs-6">
+            <p data-aos="fade-up" data-aos-duration="3000" data-aos-delay="250" class="text-secondary-emphasis lh-lg fs-6">
               Here are some of the most recent complaints submitted by our
               users.
             </p>
           </div>
         </div>
 
-        <div class="service row mb-5 justify-content-center">
+        <div data-aos="fade-up" data-aos-duration="3000" data-aos-delay="400" class="service row mb-5 justify-content-center">
           <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div
               class="card border-1 rounded-4"
@@ -233,7 +238,7 @@
             </div>
           </div>
         </div>
-        <a
+        <a data-aos="fade-up" data-aos-duration="3000" data-aos-delay="350"
           class="d-flex justify-content-center link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
           href="#"
         >
@@ -275,6 +280,11 @@
       integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
       crossorigin="anonymous"
     ></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
+
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
