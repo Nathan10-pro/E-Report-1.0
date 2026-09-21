@@ -94,6 +94,9 @@ body[data-theme="dark"] #recent .card {
   background-color: #21262d !important;
   color: var(--text) !important;
 }
+body[data-theme="dark"] button {
+  background-color: var(--primary) !important; 
+}
 
 /* =========================
    THEME TRANSITION

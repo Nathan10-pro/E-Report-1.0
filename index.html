@@ -35,7 +35,7 @@
     <!-- navbar -->
     <nav class="animate__animated animate__slideInDown navbar navbar-expand-lg bg-primary-subtle py-4">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
           <img
             src="assets/image/cropped-Frame-88.png"
             alt="Logo"
@@ -128,8 +128,8 @@
               Debitis numquam illum nesciunt natus?
             </p>
             <div>
-              <a href="" class="btn btn-primary">Let's Start</a>
-              <a href="" class="btn btn-outline-primary">About Us</a>
+              <a href="reports.html" class="btn btn-primary">Let's Start</a>
+              <a href="#about" class="btn btn-outline-primary">About Us</a>
             </div>
           </div>
           <div class="animate__animated animate__slideInRight overflow-hidden col d-flex justify-content-center justify-content-lg-end">
@@ -421,6 +421,30 @@
           }, 250);
         }
       });
+    </script>
+
+     <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const btn = this.querySelector('button[type="submit"]');
+          btn.textContent = "Mengirim...";
+
+          // Service ID dan Template ID sudah kamu masukkan dengan benar sebelumnya
+          emailjs.sendForm("service_nelw0pr", "template_k9mkzwt", this).then(
+            () => {
+              btn.textContent = "Kirim Pesan";
+              alert("Pesan berhasil terkirim!");
+              this.reset();
+            },
+            (error) => {
+              btn.textContent = "Kirim Pesan";
+              alert("Gagal mengirim pesan: " + JSON.stringify(error));
+            },
+          );
+        });
     </script>
   </body>
 </html>
