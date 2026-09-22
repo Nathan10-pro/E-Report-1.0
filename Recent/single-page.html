@@ -9,11 +9,18 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-        <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/style.css" />
 
     <link
@@ -21,13 +28,19 @@
       type="image/x-icon"
       href="./assets/image/cropped-Frame-88.png"
     />
-    <title>FAQ | IDN E-Report</title>
+    <title>Home | IDN E-Report</title>
   </head>
+
   <body data-theme="bright">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-primary-subtle py-4">
+    <nav
+      class="animate__animated animate__slideInDown navbar navbar-expand-lg bg-primary-subtle py-4"
+    >
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="index.html"
+        >
           <img
             src="assets/image/cropped-Frame-88.png"
             alt="Logo"
@@ -102,140 +115,81 @@
       </div>
     </nav>
 
-    <!-- FAQ Section -->
-    <section class="faq-section py-5">
-      <div class="container">
-        <h1 data-aos="fade-up" data-aos-duration="3000" data-aos-delay="100" class="text-center mb-4">Frequently Asked Questions</h1>
-        <div data-aos="fade-up" data-aos-duration="3000" data-aos-delay="250" class="accordion" id="faqAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                What is IDN E-Report?
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingOne"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                IDN E-Report is a platform that allows users to report issues
-                and provide feedback on various topics.
-              </div>
-            </div>
+    <!-- content -->
+    <div class="container">
+      <div class="row my-5 gap-5 gap-lg-0">
+        <div class="col-lg-8 d-lg-none">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="../assets/404.html">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+
+          <h1 class="fw-bold text-primary-emphasis">Academic Complaints</h1>
+          <p class="text-secondary">
+            <a class="text-decoratio-none fw-semibold"></a>
+          </p>
+          <div style="height: 400px; overflow: hidden">
+            <img
+              src="../assets/image/ChatGPT Image 10 Sep 2026, 14.42.06.png"
+              alt=""
+            />
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                How can I submit a report?
-              </button>
-            </h2>
-            <div
-              id="collapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingTwo"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                You can submit a report by clicking on the "Submit Report"
-                button on the homepage and filling out the required information.
-              </div>
+
+          <p class="mt-4 lh-lg"></p>
+          <blockquote
+            class="border-start border-3 border-primary p-3 fst-italic text-secondary"
+          ></blockquote>
+
+          <hr />
+          <h4 class="fw-semibold text-primary-emphasis"></h4>
+          <form action="">
+            <div>
+              <textarea
+                class="form-control rouded-3 shadow-sm"
+                rows="3"
+              ></textarea>
             </div>
+            <button class="btn btn-primary px-4">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="col-lg-4">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="../assets/404.html">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+          <div class="card mt-5">
+            <div class="card-header">Featured</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                An item<i
+                  class="fa-solid fa-chevron-right text-primary-emphasis ms-2"
+                ></i>
+              </li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li>
+            </ul>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
-              >
-                Is my report confidential?
-              </button>
-            </h2>
-            <div
-              id="collapseThree"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingThree"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Yes, all reports submitted through IDN E-Report are treated with
-                strict confidentiality.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapsefour"
-                aria-expanded="false"
-                aria-controls="collapsefour"
-              >
-                Who will see my report?
-              </button>
-            </h2>
-            <div
-              id="collapsefour"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingFour"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Reports are handled by authorized school staff responsible for reviewing and following up on submitted reports.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFive">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapsefive"
-                aria-expanded="false"
-                aria-controls="collapsefive"
-              >
-                How long does it take to receive a response?
-              </button>
-            </h2>
-            <div
-              id="collapsefive"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingFive"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-               The response time may vary depending on the type and complexity of the report. Each report will be reviewed and handled according to its priority.
-              </div>
+          <div class="card mt-4">
+            <div class="card-header fa-bold"></div>
+            <div class="card-body">
+              <span class="badge text-bg-succes"></span>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- footer -->
-    <footer class="bg-primary-subtle py-4 ">
+    <footer class="bg-primary-subtle py-4">
       <div class="container text-center">
         <p class="mb-0 text-secondary-emphasis">
           &copy; 2026 IDN E-Report. All rights reserved.
@@ -254,11 +208,10 @@
       integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
       crossorigin="anonymous"
     ></script>
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-  AOS.init();
-</script>
-
+      AOS.init();
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -326,4 +279,4 @@
       });
     </script>
   </body>
-</html
+</html>
