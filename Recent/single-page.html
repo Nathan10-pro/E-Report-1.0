@@ -21,14 +21,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="../assets/style.css" />
 
     <link
       rel="icon"
       type="image/x-icon"
-      href="./assets/image/cropped-Frame-88.png"
+      href="../assets/image/cropped-Frame-88.png"
     />
-    <title>Home | IDN E-Report</title>
+    <title>Recent | IDN E-Report</title>
   </head>
 
   <body data-theme="bright">
@@ -39,10 +39,10 @@
       <div class="container">
         <a
           class="navbar-brand d-flex align-items-center gap-2"
-          href="index.html"
+          href="../index.html"
         >
           <img
-            src="assets/image/cropped-Frame-88.png"
+            src="../assets/image/cropped-Frame-88.png"
             alt="Logo"
             width="30"
             class="d-inline-block align-text-top rounded"
@@ -66,14 +66,13 @@
               <a
                 class="nav-link text-primary-emphasis active"
                 aria-current="page"
-                href="index.html"
+                href="../index.html"
                 >Home</a
               >
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link text-primary-emphasis dropdown-toggle"
-                href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -81,14 +80,15 @@
                 Other
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="Recent.html">Recent</a></li>
-                <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
+                <li><a class="dropdown-item" href="./1.html">Recent</a></li>
+                <li>
+                  <a class="dropdown-item" href="../pages/FAQ.html">FAQ</a>
+                </li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link text-primary-emphasis dropdown-toggle"
-                href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -118,70 +118,108 @@
     <!-- content -->
     <div class="container">
       <div class="row my-5 gap-5 gap-lg-0">
-        <div class="col-lg-8 d-lg-none">
-          <nav aria-label="breadcrumb">
+        <div class="col-lg-8">
+          <nav class="d-lg-none" aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="../assets/404.html">Library</a></li>
+              <li class="breadcrumb-item">
+                <a href="../assets/404.html">Library</a>
+              </li>
               <li class="breadcrumb-item active" aria-current="page">Data</li>
             </ol>
           </nav>
 
-          <h1 class="fw-bold text-primary-emphasis">Academic Complaints</h1>
-          <p class="text-secondary">
-            <a class="text-decoratio-none fw-semibold"></a>
+          <h1 class="fw-bold text-primary-emphasis">Academic Complaint</h1>
+          <p class="text-secondary text-primary-emphasis">
+            <a class="text-decoratio-none fw-semibold "></a>Students reported
+            difficulties understanding certain topics during the learning
+            process and requested additional explanations.
           </p>
           <div style="height: 400px; overflow: hidden">
             <img
               src="../assets/image/ChatGPT Image 10 Sep 2026, 14.42.06.png"
               alt=""
+              style="height: 400px"
             />
           </div>
 
-          <p class="mt-4 lh-lg"></p>
+          <p class="mt-4 lh-lg" style="font-style: italic">
+            The student's says
+          </p>
           <blockquote
-            class="border-start border-3 border-primary p-3 fst-italic text-secondary"
-          ></blockquote>
-
+            class="text-primary-emphasis border-start border-3 border-primary p-3 fst-italic text-secondary"
+          >
+            Difficulty Understanding the Learning Material
+          </blockquote>
           <hr />
-          <h4 class="fw-semibold text-primary-emphasis"></h4>
+          <br />
+          <h4 class="fw-semibold text-primary-emphasis">
+            What's your opinion ?
+          </h4>
           <form action="">
-            <div>
+            <div class="mb-3">
               <textarea
                 class="form-control rouded-3 shadow-sm"
                 rows="3"
               ></textarea>
             </div>
-            <button class="btn btn-primary px-4">
-              <i class="fa-solid fa-paper-plane"></i>
+            <button id="send" class="btn btn-primary px-4">
+              <i class="fa-solid fa-paper-plane me-3"></i>Send
             </button>
           </form>
         </div>
 
         <div class="col-lg-4">
           <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="../assets/404.html">Library</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <ol
+              class="breadcrumb"
+              style="
+                --bs-breadcrumb-divider-color: var(--bs-primary-emphasis);
+                --bs-breadcrumb-item-active-color: var(--bs-primary-emphasis);
+              "
+            >
+              <li class="breadcrumb-item">
+                <a
+                  href="../index.html"
+                  class="text-decoration-none text-primary-emphasis"
+                  >Home</a
+                >
+              </li>
+              <li class="breadcrumb-item">
+                <a
+                  href="../assets/404.html"
+                  class="text-decoration-none text-primary-emphasis"
+                  >Library</a
+                >
+              </li>
+              <li
+                class="breadcrumb-item active text-primary-emphasis"
+                aria-current="page"
+              >
+                Data
+              </li>
             </ol>
           </nav>
           <div class="card mt-5">
-            <div class="card-header">Featured</div>
+            <div class="card-header">Other Complaint</div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                An item<i
+                I Got Bully From My Senior...<i
                   class="fa-solid fa-chevron-right text-primary-emphasis ms-2"
                 ></i>
               </li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+              <li class="list-group-item">
+                One student has found in die condition
+              </li>
+              <li class="list-group-item">We choose, We do it !</li>
             </ul>
           </div>
           <div class="card mt-4">
-            <div class="card-header fa-bold"></div>
+            <div class="card-header fa-bold">Category</div>
             <div class="card-body">
-              <span class="badge text-bg-succes"></span>
+              <span class="badge text-bg-success">Academic</span>
+              <span class="badge text-bg-danger">Healthy</span>
+              <span class="badge text-bg-primary">Condition</span>
             </div>
           </div>
         </div>
@@ -211,6 +249,33 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      document
+        .getElementById("send")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const btn = this.querySelector('button[type="submit"]');
+          btn.textContent = "Mengirim...";
+
+          // Service ID dan Template ID sudah kamu masukkan dengan benar sebelumnya
+          emailjs.sendForm("service_nelw0pr", "template_k9mkzwt", this).then(
+            () => {
+              btn.textContent = "Kirim Pesan";
+              alert("Pesan berhasil terkirim!");
+              this.reset();
+            },
+            (error) => {
+              btn.textContent = "Kirim Pesan";
+              alert("Gagal mengirim pesan: " + JSON.stringify(error));
+            },
+          );
+        });
+      (function () {
+        // GANTI 'YOUR_PUBLIC_KEY' DENGAN PUBLIC KEY AKUN EMAILJS ANDA!
+        emailjs.init("rJOlDUqgPinDHelRX");
+      })();
     </script>
 
     <script>
@@ -278,5 +343,6 @@
         }
       });
     </script>
+    <script src="../assets/logic.js"></script>
   </body>
 </html>

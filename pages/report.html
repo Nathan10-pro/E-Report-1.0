@@ -19,15 +19,18 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="./assets/image/cropped-Frame-88.png"
+      href="../assets/image/cropped-Frame-88.png"
     />
-    <title>Recent | IDN E-Report</title>
+    <title>Report | IDN E-Report</title>
   </head>
   <body data-theme="bright">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-primary-subtle py-4">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="../index.html"
+        >
           <img
             src="../assets/image/cropped-Frame-88.png"
             alt="Logo"
@@ -67,8 +70,12 @@
                 Other
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="Recent.html">Recent</a></li>
-                <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
+                <li>
+                  <a class="dropdown-item" href="../Recent/1.html">Recent</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/FAQ.html">FAQ</a>
+                </li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -102,12 +109,14 @@
 
     <!-- recent -->
     <section id="recent" class="py-5">
-      <div class="container p-5">
-        <div class="row text-center mb-5">
-          <div class="col">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-lg-row mb-5 justify-content-center justify-content-lg-between align-items-center"
+        >
+          <div class="col-lg-8 text-center text-lg-start">
             <h1
               data-aos="fade-up"
-              data-aos-duration="3000"
+              data-aos-duration="2000"
               data-aos-delay="100"
               class="fw-bold text-primary-emphasis mb-4"
             >
@@ -115,7 +124,7 @@
             </h1>
             <p
               data-aos="fade-up"
-              data-aos-duration="3000"
+              data-aos-duration="2000"
               data-aos-delay="250"
               class="text-secondary-emphasis lh-lg fs-6"
             >
@@ -123,10 +132,23 @@
               users.
             </p>
           </div>
+          <div class="col-lg-2 mt-4 align-items-center">
+            <button
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-delay="100"
+              class="btn btn-primary width-100 fw-bold text-primary-emphasis mb-4"
+            >
+              <i class="fa-solid fa-plus"></i>Add Complaints
+            </button>
+          </div>
         </div>
         <a
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="2000"
           data-aos-delay="350"
           class="d-flex justify-content-center link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
           href="../Recent/1.html"
@@ -148,6 +170,70 @@
         </a>
       </div>
     </section>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h1 class="modal-title fs-5 semi-bold" id="exampleModalLabel">
+              <i class="fa-solid fa-pen-to-square"></i>Add Your Complaint
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form action="">
+            <div class="modal-body p-4" style="padding: 3rem;">
+              <div class="mb-4">
+                <label class="form-label fw-semibold">Title</label>
+                <input
+                  class="form-control shadow-sm"
+                  type="text"
+                  placeholder="Insert the title"
+                />
+              </div>
+              <div class="mb-4">
+                <label class="form-label fw-semibold" for="">Category</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>selected</option>
+                  <option value="academic">Academic</option>
+                  <option value="facility">Facility</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <label class="form-label fw-semibold">Your report</label>
+                <textarea class="form-control" rows="6" placeholder="Report"></textarea>
+              </div>
+              <div class="mb-4">
+                <label class="form-label fw-semibold">Upload images</label>
+                <input class="form-control" type="file" accept="image/*">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="reset"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Reset
+              </button>
+              <button type="submit" class="btn btn-primary">
+               <i class="fa-solid fa-paper-plane me-2"></i>Upload
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- footer -->
     <footer class="bg-primary-subtle py-4">
@@ -239,5 +325,6 @@
         }
       });
     </script>
+    <script src="../assets/logic.js"></script>
   </body>
 </html>
